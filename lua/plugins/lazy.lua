@@ -145,12 +145,14 @@ require('lazy').setup({
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         defaults = {
+          path_display = 'smart',
           mappings = {
             i = {
               -- ['<c-enter>'] = 'to_fuzzy_refine'
               -- ['<C-u>'] = false, -- Undo prompt
               ['<C-k>'] = actions.move_selection_previous,
               ['<C-j>'] = actions.move_selection_next,
+              ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
             },
           },
         },
